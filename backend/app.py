@@ -1,10 +1,9 @@
 from flask import Flask
 from flask_cors import CORS
-from flask_restful import Api, Resource
+
 
 
 app = Flask(__name__)
-api = Api(app)
 CORS(app)
 
 
@@ -14,13 +13,10 @@ db.init_app(app)
 
 
 
+from routes import api
 
+api.init_app(app)
 
-class hello(Resource):
-    def get(self):
-        return {'message' : 'hello world'}
-    
-api.add_resource(hello, '/message')
 
 
 
