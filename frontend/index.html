@@ -1,17 +1,13 @@
-<h1>Welcome to iitm bootcamp</h1>
-<p id = 'message'>click the button below to reveal the message</p>
-
-<button onclick = 'getmsg()'>click me </button>
-
-
-<script>
-    function getmsg(){
-        fetch('http://localhost:5000/message')
-        .then(response => response.json())
-        .then(data => {
-            console.log(data)
-            document.getElementById('message').innerText = data.message
-        
-        });
-    }
-</script>
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
